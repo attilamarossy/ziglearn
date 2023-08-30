@@ -1,12 +1,14 @@
+// zig test 07_recursion.zig
+
 const std = @import("std");
 const expect = @import("std").testing.expect;
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
 
-    const eredmeny = fibonacci(8);
+    const result = fibonacci(8);
 
-    try stdout.print("A rekurzió eredménye: {any}\n", .{eredmeny});
+    try stdout.print("Fibonacci 8 = {any}\n", .{result});
 }
 
 fn fibonacci(n: u16) u16 {
