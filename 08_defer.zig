@@ -12,5 +12,5 @@ pub fn main() !void {
         defer after = before + 2;
     }
 
-    try stdout.print("Before: {any}, after: {any}\n", .{ before, after });
+    try stdout.print("Before: {d}, after: {d}\n", .{ before, after });
 }
